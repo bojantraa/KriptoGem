@@ -97,17 +97,17 @@
    
 
    </div>
-   <div class="main-cr" id="calc-div">
+ <div class="main-cr" id="calc-div">
    <div class="crypti-calc">
    <h1>Крипто Калкулатор</h1>
-   <div>
+   <div class="divinput">
    <label for="initialInvestment">Почетна Инвестиција (USD):</label><br>
    <input type="number" id="initialInvestment" step="0.01" placeholder="     $"></div><br>
-<div>
+<div class="divinput">
    <label for="initialCoinPrice">Почетна Цена на Коин (USD):</label><br> 
    <input type="number" id="initialCoinPrice" step="0.01" placeholder="     $"></div><br>
-<div>
-   <label for="projectedCoinPrice">Проектирана Цена на Коин (USD):</label><br>
+<div class="divinput" >
+   <label for="projectedCoinPrice">Проектирана Цена на Коин:</label><br>
    <input type="number" style="font-size: large;" id="projectedCoinPrice" step="0.01" placeholder="    $"></div><br>
 
    <button onclick="calculateProjectedValue()">Calculate</button>
