@@ -1,0 +1,454 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+   <link rel="stylesheet" href="Template.css">
+
+
+   <style>
+
+      
+   </style>
+</head>
+
+<body>
+   <div class="mainMenu" id="MainMeniId">
+      <img src="Baner.png" style="width:82vw;border-radius: 5px;margin-bottom: 30px;margin-top: 10px;">
+
+      <div onclick="AddTemplate(0)" class="ToolsBox" id="0">
+         <div class="toolsImg">
+            <img src="drawing-painting.png">
+            <!-- retouching-healing.png -->
+         </div>
+
+         <div class="toolsNamesBox">
+            <p class="toolsNames">Дневни анализи</p>
+         </div>
+
+
+      </div>
+
+      <div onclick="AddTemplate(1)" class="ToolsBox" id="1">
+         <div class="toolsImg">
+            <img src="crop-slice.png">
+
+         </div>
+
+         <div class="toolsNamesBox">
+            <p class="toolsNames">Курс за Почетници </p>
+         </div>
+
+
+      </div>
+
+      <div onclick="AddTemplate(2)" class="ToolsBox">
+         <div class="toolsImg">
+            <img src="Napreden-kurs.png">
+
+         </div>
+
+         <div class="toolsNamesBox">
+            <p class="toolsNames">Напреден Курс</p>
+         </div>
+
+
+      </div>
+
+      <div onclick='AddTemplate(3)' class="ToolsBox">
+         <div class="toolsImg">
+            <img src="selection-tools.png">
+
+         </div>
+
+         <div class="toolsNamesBox">
+            <p class="toolsNames">Кратки видеа (Shorts) </p>
+         </div>
+
+
+      </div>
+      <!-- <div onclick='AddTemplate(4)' class="ToolsBox">
+         <div class="toolsImg">
+            <img src="typing -text.png">
+
+         </div>
+
+         <div class="toolsNamesBox">
+            <p class="toolsNames">Typing and Text </p>
+         </div>
+
+
+      </div> -->
+      <!-- <div class="ToolsBox">
+         <div class="toolsImg">
+            <img src="navigation-tools.png">
+
+         </div>
+
+         <div class="toolsNamesBox">
+            <p class="toolsNames">Navigation Tools </p>
+         </div>
+
+
+      </div> -->
+
+   </div>
+   
+
+   </div>
+   <div class="main-cr" id="calc-div">
+   <div class="crypti-calc">
+   <h1>Крипто Калкулатор</h1>
+   <div>
+   <label for="initialInvestment">Почетна Инвестиција (USD):</label><br>
+   <input type="number" id="initialInvestment" step="0.01" placeholder="     $"></div><br>
+<div>
+   <label for="initialCoinPrice">Почетна Цена на Коин (USD):</label><br> 
+   <input type="number" id="initialCoinPrice" step="0.01" placeholder="     $"></div><br>
+<div>
+   <label for="projectedCoinPrice">Проектирана Цена на Коин (USD):</label><br>
+   <input type="number" style="font-size: large;" id="projectedCoinPrice" step="0.01" placeholder="    $"></div><br>
+
+   <button onclick="calculateProjectedValue()">Calculate</button>
+
+   <h2>Проектирана Вредност во USD <span id="projectedValue">0</span></h2>
+  </div></div>
+
+   
+
+   <script>
+
+
+let sources= [
+    {baner: ["Selection-tools-baner.png","Crop-and-slice.png","napreden-kurs-baner.png","kratki.png","Ty-Baner.jpg","Untitled-1.jpg"]},
+    {tools: [
+        [
+          {
+            "name": "Втора добротворна акција на Заедницата Крипто Гемиџија! Македонец за Македонец!!!",
+            "img": "tool-Icons\\selection-tools\\marquee-tool.png",
+            "description": "Втората добротворна акција на заедницата крипто гемиџија во која 500 евра донација во прехрамбени продукти беше донирани на црковна организација во велес за помош на македонците кои имаат потреба да подадеме рака. Можеме ние како нација многу, а каналот е само почеток! Нашата солидарност и заедништво е суштината на македонштината! Уште одат гемиџии по светот! Македонец за Македонец",
+            "video": "https://www.youtube.com/watch?v=RShTXfsU4Nk&list=PLMZFAeDxJ2Etkuihn_gPR6Fxl4GOy3akW"
+          },
+          {
+         "name": "Гемиџија Крипто Алт-коин Вести 16.06.2024",
+            "img": "tool-Icons\\selection-tools\\lasso-tool.png",
+            "description": "The Lasso Tool in Photoshop is perfect for making freehand selections. It's great for outlining irregular shapes or objects in an image with precision.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Пазарот во овој момент е крајно непредвидлив! Трепни и ќе го пропуштиш...",
+            "img": "tool-Icons\\selection-tools\\magic-wand--tool.png",
+            "description": "The Magic Wand Tool in Photoshop selects areas of similar color or tone with a single click. It's useful for quickly selecting and editing specific parts of an image, like backgrounds or objects with uniform colors ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "BTC, DXY, OIL-Техничка анализа - Дали е ова навистина моментот кога сакате да продадете? 14.05.2024",
+            "img": "tool-Icons\\selection-tools\\quick-selection-tool.png",
+            "description": "The Quick Selection Tool in Photoshop lets you easily select objects by painting over them. It intelligently detects and selects similar areas based on texture and color, making complex selections a breeze",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "До каде сме во овој циклус... Сега одлучивте да се откажете?",
+            "img": "tool-Icons\\selection-tools\\object-selection--tool.png",
+            "description": "The Object Selection Tool in Photoshop automatically selects objects or areas within an image with just a simple drag. It's designed to quickly and accurately identify and select objects based on their boundaries, saving you time and effort in making precise selections",
+            "video": "\\videos\\da.jpg"
+          }
+          ,
+          {
+            "name": "Крипто техничка анализа Напреден курс 115. Крипто Арбитражно тргување",
+            "img": "tool-Icons\\selection-tools\\object-selection--tool.png",
+            "description": "The Object Selection Tool in Photoshop automatically selects objects or areas within an image with just a simple drag. It's designed to quickly and accurately identify and select objects based on their boundaries, saving you time and effort in making precise selections",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {
+            "name": "Crop Tool",
+            "img": "tool-Icons\\Crop_tools\\crop-tool.png",
+            "description": "The Crop Tool in Photoshop allows you to trim or remove unwanted areas of an image. It's perfect for refining composition, adjusting aspect ratios, or focusing on specific elements within your photos",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Slice tool",
+            "img": "tool-Icons\\Crop_tools\\slice-tool.png",
+            "description": "The Slice Tool in Photoshop divides an image into smaller sections, or slices, which can be exported separately. It's commonly used for web design to optimize images for faster loading times or to create interactive elements like image maps.",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {
+            "name": "Brush Tool",
+            "img": "tool-Icons\\Painting and drawing\\brush-tool.png",
+            "description": "The Brush Tool in Photoshop is essential for painting, drawing, and adding artistic touches to images. It allows you to apply colors, textures, and effects with various brush sizes and styles, giving you full control over your creative expression. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Pencil Tool",
+            "img": "tool-Icons\\Painting and drawing\\penciltool-tool.png",
+            "description": "The Pencil Tool in Photoshop mimics a traditional pencil, allowing for precise, pixel-level drawing and editing. It's great for creating sharp, clean lines and detailed sketches with a more controlled and defined appearance compared to the Brush Tool.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Paint Bucket",
+            "img": "tool-Icons\\Painting and drawing\\paint-bucket.png",
+            "description": "The Paint Bucket Tool in Photoshop fills enclosed areas of an image with a selected color or pattern. It's useful for quickly adding solid colors to shapes or backgrounds, and it can also be adjusted for tolerance to fill larger areas with similar colors. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Gradient Tool",
+            "img": "tool-Icons\\Painting and drawing\\gradient-tool.png",
+            "description": "The Gradient Tool in Photoshop creates smooth transitions between colors or tones in an image. It's perfect for adding depth, dimension, and visual interest to your designs by blending multiple colors or shades seamlessly across your canvas.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Mixer Brush Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\mixer-brush-tool.png",
+            "description": "The Mixer Brush Tool in Photoshop simulates realistic painting techniques by mixing colors on a digital canvas. It allows you to blend and smudge colors together, creating smooth, painterly effects similar to traditional oil or acrylic painting.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Eraser Tool",
+            "img": "tool-Icons\\Painting and drawing\\eraser-tool.png",
+            "description": "The Eraser Tool in Photoshop removes portions of an image or layer to create transparency or reveal underlying layers. It's handy for precise editing, refining edges, or correcting mistakes in your digital artwork or photographs ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Clone Stamp Tool",
+            "img": "tool-Icons\\Painting and drawing\\stamp-clone-tool.png",
+            "description": "The Clone Stamp Tool in Photoshop duplicates parts of an image by sampling pixels from one area and painting them onto another. It's perfect for removing unwanted elements, retouching imperfections, or seamlessly blending areas of an image for a clean and polished result.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "History Brush Tool",
+            "img": "tool-Icons\\Painting and drawing\\history-brush-tool.png",
+            "description": "The History Brush Tool in Photoshop allows you to paint or restore parts of an image to a previous state from its editing history. It's useful for selectively applying earlier versions of your edits, giving you precise control over which parts of your image retain certain effects or adjustments. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Pattern Stamp Tool",
+            "img": "tool-Icons\\Painting and drawing\\patern-stamp-tool.png",
+            "description": "The Pattern Stamp Tool in Photoshop allows you to paint with a selected pattern instead of a solid color. It's useful for adding textures, backgrounds, or repeating patterns to your images, giving them a unique and customized look.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Blur Tool, Sharpen Tool, and Smudge Tool",
+            "img": "tool-Icons\\Painting and drawing\\Blur-sharpen-smudge-tool.png",
+            "description": "The Blur Tool in Photoshop softens areas of an image by decreasing the contrast between pixels, creating a smooth effect. The Sharpen Tool enhances the clarity and detail of selected areas by increasing the contrast between adjacent pixels. The Smudge Tool simulates dragging a finger through wet paint, allowing you to blend or smudge colors together for a more organic and painterly effect.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Dodge Tool, Burn Tool, and Sponge Tool",
+            "img": "tool-Icons\\Painting and drawing\\burn-sponge-tool.png",
+            "description": "The Dodge Tool in Photoshop lightens specific areas of an image, simulating the effect of dodging during traditional darkroom processing. The Burn Tool darkens selected areas, mimicking the burning process in darkroom techniques. The Sponge Tool adjusts the saturation of colors in an image, allowing you to selectively desaturate or saturate areas to enhance or tone down colors.",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {
+            "name": "Spot Healing Brush Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\spot-healing.png",
+            "description": "The Spot Healing Brush Tool in Photoshop quickly removes blemishes, spots, and imperfections from images with just a click. It intelligently samples nearby pixels to seamlessly blend and replace unwanted areas, resulting in smooth and natural-looking edits.",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Healing Brush Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\healing-brush.png",
+            "description": "The Healing Brush Tool in Photoshop is perfect for seamlessly repairing imperfections in images. It works by blending sampled pixels from a source area with the surrounding pixels, allowing you to effectively remove blemishes, wrinkles, or other unwanted elements while preserving the texture and tone of the original image. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Patch Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\patch-tool.png",
+            "description": "The Patch Tool in Photoshop is great for repairing larger areas of an image. It allows you to select a problematic area and then replace it with content from another part of the image or a different layer. This tool is particularly useful for seamlessly fixing larger imperfections or removing unwanted objects from your photos. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Content-Aware Move Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\Content-aweare-tool.png",
+            "description": "The Content-Aware Move Tool in Photoshop lets you move or extend objects in your images while intelligently filling in the background. It seamlessly blends surrounding pixels to create a natural-looking result, making it easy to reposition elements within your composition without leaving noticeable traces of editing.",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {  
+            "name": "Marquee tool",
+            "img": "tool-Icons\\selection-tools\\eliptical -marquee-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Horizontal Type Tool",
+            "img": "tool-Icons\\selection-tools\\marquee-tool.png",
+            "description": "The Horizontal Type Tool in Photoshop enables you to add text horizontally to your images. It allows you to create and customize text layers with various fonts, sizes, colors, and styles, giving you full control over the typography in your designs.",
+            "video": "\\videos\\VIDEO2.jpg"
+          },
+          {
+            "name": "Vertical Type Tool",
+            "img": "tool-Icons\\selection-tools\\lasso-tool.png",
+            "description": "The Vertical Type Tool in Photoshop allows you to add text vertically to your images. It's perfect for creating vertical text elements, such as signage, posters, or stylized typography. You can customize the font, size, color, and other attributes to suit your design needs.",
+            "video": "\\videos\\da.jpg"
+          }
+          
+        ],[
+          {  
+            "name": "Marquee tool",
+            "img": "tool-Icons\\selection-tools\\eliptical -marquee-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          }
+        ]
+      ]}
+    ]
+
+     function AddTemplate(index) {
+    setTimeout(function() {
+        let Baner = sources[0].baner[index];
+        let body = document.body;
+        let Template = document.createElement('div');
+        Template.innerHTML = `
+            <div class="main">
+                <img src="${Baner}" style="width:95%;border-radius: 5px;margin-bottom: 30px;margin-top: 10px;">
+                <div class="container">
+                    <div class="item"  onclick='AddTemplate(0)'>Дневни Анализи</div>
+                    <div class="item"  onclick='AddTemplate(1)'>Курс За Почетници</div>
+                    <div class="item" onclick='AddTemplate(2)' >Напреден Курс</div>
+                    <div class="item" onclick='AddTemplate(3)' >Кратки Видеа </div>
+                    <div class="item" onclick='AddTemplate(4)' >Typing tools</div>
+                    <!-- Add more items as needed -->
+                </div>
+                <div id='FullList'></div>
+                <a href="index.html" class="lists"> <img src="Buttons/buton-see-more.png"></a> 
+            </div>`;
+        
+        body.appendChild(Template);
+        // let calculator=document.querySelectorAll('.main-cr');
+        // calculator.style.display='none';
+
+        let menu = document.getElementById('MainMeniId');
+        menu.style.display = 'none';
+        let calculator=document.getElementById('calc-div')
+        calculator.style.display = 'none';
+
+
+        sources[1].tools[index].forEach((tool, toolIndex) => {
+            let FullList = document.getElementById('FullList');
+            let List = document.createElement('div');
+            let buttonNumber = toolIndex;
+            List.innerHTML = `<div id="listDivStyle">
+                <div  class="list">
+                    <div class="toolImg">
+                        <p>${tool.name}</p>
+                    </div>
+                    <div class="buttons-see-more">
+                        <img onclick='SeeMore(${buttonNumber})' id='SeeMore' src="Buttons/buton-see-more.png">
+                    </div>
+                </div> 
+            </div>`;
+            FullList.appendChild(List);
+        });
+
+        // Remove the previous template if there's more than one
+        let mainContainer = document.querySelectorAll('.main');
+        if (mainContainer.length > 1) {
+            mainContainer[0].remove();
+
+            
+            sources[1].tools[index].forEach((tool, toolIndex) => {
+                let FullList = document.getElementById('FullList');
+                let List = document.createElement('div');
+                let buttonNumber = toolIndex;
+                List.innerHTML = `<div id="listDivStyle">
+                    <div  class="list">
+                        <div class="toolImg">
+                            <p>${tool.name}</p>
+                        </div>
+                        <div class="buttons-see-more">
+                            <img onclick='SeeMore(${buttonNumber})' id='SeeMore' src="Buttons/buton-see-more.png">
+                        </div>
+                    </div> 
+                </div>`;
+                FullList.appendChild(List);
+            });
+        }
+    }, 200); 
+}
+            
+   //   koga koristish d.getElementsByClassName dava HTML kolekcija
+   //   koga koristish query selektor gi dava node list
+   //ovde iterirame niz node list od klasa .ToolBox и со евент листенер на клик ко земаме индексот на елементот кој го кликаме за да 
+   // му го додадеме како варијабла на tools[]podolu vo kodot za da znae od koj po red objekt treba da zema informacii
+let menuButtons = document.querySelectorAll('.ToolsBox');
+menuButtons.forEach((button, index) => {
+    button.addEventListener('click', function(k) {
+        indexNaButton = index;
+    });
+});
+
+ 
+      function SeeMore(buttonNumber) {
+
+    let description = sources[1].tools[indexNaButton][buttonNumber].description;
+    let img = sources[1].tools[indexNaButton][buttonNumber].video;
+  listDiv=  document.querySelectorAll('#listDivStyle')[buttonNumber]//vaka znaj na kaj da dodaj div
+  buttonToRotate=document.querySelectorAll('#SeeMore')[buttonNumber]
+ buttonToRotate.classList.toggle("buttons-see-more-rotated");
+    let AppendDiv=document.createElement('div')
+     AppendDiv.innerHTML=`
+     <div class ='description'style='margin-left:12px'>
+      <iframe width="560" height="315" src="${img}" frameborder="0" allowfullscreen></iframe>
+
+           <p>${description}</p>
+
+       <div>
+        console.log(img)
+              </div>
+     </div>`//tuka si dodavash divovi 
+        listDiv.appendChild(AppendDiv)
+
+
+if(document.querySelectorAll('.description').length>1){
+   document.querySelectorAll('.description').forEach(description=>{
+      description.remove()
+   })
+}
+
+   
+   //  kako da znaj koj div da go popolni
+   //i kako da se kazi od kaj da vleci
+
+
+   
+}
+function calculateProjectedValue() {
+            // Get the input values
+            var initialInvestment = document.getElementById('initialInvestment').value;
+            var initialCoinPrice = document.getElementById('initialCoinPrice').value;
+            var projectedCoinPrice = document.getElementById('projectedCoinPrice').value;
+
+            // Validate the inputs
+            if (initialInvestment === "" || initialCoinPrice === "" || projectedCoinPrice === "") {
+                alert("Please enter all the required values.");
+                return;
+            }
+
+            // Convert inputs to numbers
+            initialInvestment = parseFloat(initialInvestment);
+            initialCoinPrice = parseFloat(initialCoinPrice);
+            projectedCoinPrice = parseFloat(projectedCoinPrice);
+
+            // Calculate the number of coins bought
+            var coinsBought = initialInvestment / initialCoinPrice;
+
+            // Calculate the projected value
+            var projectedValue = coinsBought * projectedCoinPrice;
+
+            // Display the result
+            document.getElementById('projectedValue').textContent = projectedValue.toFixed(2);
+        }
+
+   </script>
+
+</body>
+
+</html>

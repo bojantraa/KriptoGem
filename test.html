@@ -1,0 +1,225 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+   <link rel="stylesheet" href="Template.css">
+
+
+   <style>
+
+      
+   </style>
+</head>
+
+<body>
+ 
+
+
+      </div>
+
+   </div>
+
+
+   </div>
+
+   <script>
+
+let sources= [ {baner: ["Selection-tools-baner.png","Crop-and-slice.png","Painting-and-drawing.png","Retouching-and-healing.png","Ty-Baner.jpg","Untitled-1.jpg"]},
+               {tools: [[
+          {  
+            name: "Marquee tool",
+            img: "tool-Icons\\Selection-tools\\eliptical -marquee-tool.png",
+            description: "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            video: "How To Cut Out An Image In Photoshop (2022).mp4"
+          },
+          {
+            "name": "Eliptical Marquee",
+            "img": "tool-Icons\\Selection-tools\\marquee-tool.png",
+            "description": "Laso tool selection se koristi za i taka natamu i taka natamu..",
+            "video": "\\videos\\VIDEO2.jpg"
+          },
+          {
+            "name": "Lasso Tool",
+            "img": "tool-Icons\\Selection-tools\\lasso-tool.png",
+            "description": "3",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Magic Wand Tool",
+            "img": "tool-Icons\\Selection-tools\\magic-wand--tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Quick Selection Tool",
+            "img": "tool-Icons\\Selection-tools\\quick-selection-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Object Selection Tool",
+            "img": "tool-Icons\\Selection-tools\\object-selection--tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {
+            "name": "Crop Tool",
+            "img": "tool-Icons\\Crop_tools\\crop-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Slice tool",
+            "img": "tool-Icons\\Crop_tools\\slice-tool.png",
+            "description": "Slice tool se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {
+            "name": "Brush Tool",
+            "img": "tool-Icons\\Painting and drawing\\brush-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Pencil Tool",
+            "img": "tool-Icons\\Painting and drawing\\penciltool-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Paint Bucket",
+            "img": "tool-Icons\\Painting and drawing\\paint-bucket.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Gradient Tool",
+            "img": "tool-Icons\\Painting and drawing\\gradient-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Mixer Brush Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\mixer-brush-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Eraser Tool",
+            "img": "tool-Icons\\Painting and drawing\\eraser-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Clone Stamp Tool",
+            "img": "tool-Icons\\Painting and drawing\\stamp-clone-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "History Brush Tool",
+            "img": "tool-Icons\\Painting and drawing\\history-brush-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Pattern Stamp Tool",
+            "img": "tool-Icons\\Painting and drawing\\patern-stamp-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Blur Tool, Sharpen Tool, and Smudge Tool",
+            "img": "tool-Icons\\Painting and drawing\\Blur-sharpen-smudge-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Dodge Tool, Burn Tool, and Sponge Tool",
+            "img": "tool-Icons\\Painting and drawing\\burn-sponge-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {
+            "name": "Spot Healing Brush Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\spot-healing.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Healing Brush Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\healing-brush.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Patch Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\patch-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Content-Aware Move Tool",
+            "img": "tool-Icons\\retouching-and-healing-tools\\Content-aweare-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          }
+        ],
+        [
+          {  
+            "name": "Marquee tool",
+            "img": "tool-Icons\\Selection-tools\\eliptical -marquee-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Eliptical Marquee",
+            "img": "tool-Icons\\Selection-tools\\marquee-tool.png",
+            "description": "Laso tool selection se koristi za i taka natamu i taka natamu..",
+            "video": "\\videos\\VIDEO2.jpg"
+          },
+          {
+            "name": "Lasso Tool",
+            "img": "tool-Icons\\Selection-tools\\lasso-tool.png",
+            "description": "3",
+            "video": "\\videos\\da.jpg"
+          },
+          {
+            "name": "Magic Wand Tool",
+            "img": "tool-Icons\\Selection-tools\\magic-wand--tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          }
+          
+        ],[
+          {  
+            "name": "Marquee tool",
+            "img": "tool-Icons\\Selection-tools\\eliptical -marquee-tool.png",
+            "description": "Marrquie selection se koristi za i taka natamu i taka natamu.. ",
+            "video": "\\videos\\da.jpg"
+          }
+        ]
+      ]}
+    ]
+
+let Baner = sources[1].tools[0][0].name;
+
+console.log(Baner)
+    
+
+sources.tools[index]
+
+
+   </script>
+
+</body>
+
+</html>

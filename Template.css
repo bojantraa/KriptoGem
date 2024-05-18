@@ -1,0 +1,259 @@
+body {
+
+    box-sizing: border-box;
+    background-color: #1b1b1b;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+ a {
+    text-decoration: none;
+    color: #c6c4c7;
+
+ }
+
+ .main {
+    /* flex-direction: row;
+   display: flex;
+   columns: 2; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #c6c4c7;
+    flex-direction: column;
+
+ }
+
+ .lists img {
+    margin-left: 10px;
+    height: 7vh;
+    margin-top: 0.5vh;
+    margin-right: 10px
+ }
+
+ .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+ }
+
+ .SelectionToolsNames {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    font-size: 2.5vh;
+ }
+
+ .lists {
+    width: 95%;
+ }
+
+ .buttons-see-more {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-left: 2vh;
+ }
+
+ .buttons-see-more img {
+    height: 4vh;
+ }
+
+ .toolImg {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+ }
+ .toolImg img{
+    margin-left: 12px;
+    height: 7vh;
+    margin-top: 0.5vh;
+    margin-right: 10px;
+    padding-top: 3px;
+   }
+   .description{
+      
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1b1b1b;
+      margin: 0px 15px 5px 15px;
+      border-radius: 4px;
+   }
+  .description p{
+      max-width: 90%;
+      margin-inline: 10px;
+      margin-block: 10px;
+      border-radius: 3px;
+      text-transform: capitalize;
+      padding-bottom: 15px;
+   }
+   .description img,p{
+     margin-left: 15px;
+   }
+   .description iframe{
+   width:100%;
+ 
+
+   }
+   
+   .buttons-see-more-rotated{
+      transform: rotate(180deg);
+      transition: 0.5s;
+      
+     
+   }
+   body {
+
+      box-sizing: border-box;
+      background-color: #1b1b1b;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   }
+
+   a {
+      text-decoration: none;
+      color: #c6c4c7;
+
+   }
+
+   .mainMenu {
+      /* flex-direction: row;
+     display: flex;
+     columns: 2; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color: #c6c4c7;
+
+   }
+
+   .ToolsBox {
+      background-color: #262626;
+      border: 1px dashed rgb(129, 129, 129);
+      border-radius: 1.5vw;
+      width: 38.5vw;
+      height: 38.5vw;
+      margin: 2vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s;
+
+
+   }
+
+   .ToolsBox:hover {
+      background-color: #414141;
+      border: 1px dashed rgb(129, 129, 129);
+      border-radius: 1.5vw;
+      width: 38.5vw;
+      height: 38.5vw;
+      margin: 2vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.3s;
+
+   }
+
+   .toolsImg img {
+      width: 17vw;
+      height: 17vw;
+      margin-top: 21%;
+
+
+   }
+
+
+   .toolsNamesBox {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      font-size: 1vh;
+   }
+
+   .toolsImg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 4;
+
+   }
+
+   .toolsNames {
+      margin: 0px 0px 30px 0px;
+      font-size: 3vw;
+   }
+
+   #FullList {
+      width: 95%;
+   }
+
+   #listDivStyle {
+      background-color: #414141;
+      margin-block: 15px;
+      border-radius: 5px;
+      border: 1px dashed rgb(129, 129, 129);
+   }
+  .container {
+      width: 95%; /* Set a fixed width for the container */
+      white-space: nowrap; /* Prevent line breaks */
+      overflow-x: auto; /* Enable horizontal scrolling */
+      padding: 10px; /* Just for demonstration */
+  }
+  
+ .item {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-inline: 25px;
+   padding-block: 5px;
+   border-radius: 50px;
+   border: #7d7d7d solid 1px;
+   background-color: #414141;
+   display: inline-block; /* Display items in a row */
+   margin-right: 10px; /* Just for demonstration */
+   box-shadow: 0px 0px 10px rgba(0, 10, 0, 1); /* Add drop shadow */
+}
+  .container::-webkit-scrollbar {
+   display: none; /* Hide scrollbar for WebKit browsers (like Chrome/Safari) */
+}
+.crypti-calc{
+   background-color: #7d7d7d44;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   width: 88%;
+   
+}
+label,h1,h2{
+  color: #c0c0c0;
+  
+}
+input{
+   color: #c0c0c0;
+   background-color:rgba(255, 255, 255, 0.075);
+   border: 1px dashed rgb(129, 129, 129);
+   width:50vh;
+   border-radius:15px;
+   height: 50px;
+   margin-top: 15px;
+}
+.main-cr{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.crypti-calc button{
+   background: linear-gradient(to right, #3f0101, #ca0001);
+   border-radius: 20px;
+     color:rgb(255, 255, 255);
+     width: 150px;
+     height: 35px;
+}
