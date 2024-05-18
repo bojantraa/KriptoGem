@@ -257,3 +257,17 @@ input{
      width: 150px;
      height: 35px;
 }
+.divinput {
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.divinput input{
+   width: 90%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
